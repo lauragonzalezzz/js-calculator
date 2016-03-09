@@ -6,7 +6,24 @@
  * @return {object} `calculator` object that can be used
  */
 
-
+function calculatorModule() {
+  var _memory;
+  var _total = 0;
+  return {
+    memory : _memory,
+    total : _total,
+    load : function(val){
+      total = val;
+      return total;
+    },
+    getTotal : function() {
+      return total;
+    }
+  };
+}
+var calculator = calculatorModule();
+console.log(calculator.load(903));
+console.log(calculator.getTotal());
   /**
    * sets the `total` to the number passed in
    * @param  { Number } x
